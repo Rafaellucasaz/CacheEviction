@@ -1,18 +1,23 @@
 package entity;
 
-import java.sql.Time;
 
 public class Ordem {
+    
     private int id;
-    private String name;
-    private String description;
-    private Time time;
+    private String nome;
+    private String descricao;
+    private String hora;
+    
 
-    public Ordem(int id, String name, String description,Time time){
+    public Ordem(){
+        
+    }
+    public Ordem(int id,String nome, String descricao,String hora) throws Exception{
         setId(id);
-        setName(name);
-        setDescription(description);
-        setTime(time);
+        setNome(nome);
+        setDescricao(descricao);
+        setHora(hora);
+        
     }
 
     public int getId() {
@@ -23,29 +28,38 @@ public class Ordem {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) throws Exception {
+        if(nome == ""){
+            throw new Exception("nome da ordem de servico nao pode ser vazio");
+        }
+        this.nome = nome;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescricao(String descricao) throws Exception {
+        if(descricao == ""){
+            throw new Exception("descricao da ordem nao pode ser vazio");
+        }
+        this.descricao = descricao;
     }
 
-    public Time getTime() {
-        return time;
+    public String getHora() {
+        return hora;
     }
 
-    public void setTime(Time time) {
-        this.time = time;
+    public void setHora(String hora) {
+        this.hora = hora;
     }
+
+    
+    
 
     
 }

@@ -1,14 +1,37 @@
 package modelo;
 
 import entity.Ordem;
+import servidor.Server;
+
 import java.util.Queue;
 import java.util.Stack;
 
 public class AVL {
-    Node raiz = null;
+    public Node raiz = null;
+    public int tam = 0;
+
+    public Node buscar(int ch){
+        return this.buscar(raiz,ch);
+    }
+    private Node buscar(Node arv,int ch){
+        if(arv ==  null){
+            return null;
+        }
+        if(ch < arv.chave){
+           return this.buscar(arv.esq, ch);
+        }
+        else if(ch > arv.chave){
+            return this.buscar(arv.dir, ch);
+        }
+        else{
+            return arv;
+        }
+    }  
+
 
     public void inserir(int ch, Ordem o){
         raiz = inserir(raiz,ch,o);
+        tam++;
     }
 
     private Node inserir(Node arv, int ch, Ordem o){
@@ -36,10 +59,12 @@ public class AVL {
             
             if(fbArvEsq >=0){ // simples
                 //return rds();    
+                Server.log("Rotação direita simples ao inserir nó de chave " + ch);
                 return rotacaoDireitaSimples(arv);
             }
             else if(fbArvEsq < 0){ // dupla
                 //return rdd();
+                Server.log("Rotação direita dupla ao inserir nó de chave " + ch);
                 arv.esq = rotacaoEsquerdaSimples(arv.esq);
                 return rotacaoDireitaSimples(arv);
             }
@@ -49,10 +74,12 @@ public class AVL {
         if(fb < -1 && fbArvDir <= 0){
             if(fbArvDir <= 0){ // simples
                 //return res();
+                Server.log("Rotação esquerda simples ao inserir nó de chave " + ch);
                 return rotacaoEsquerdaSimples(arv);
             }
             else{ //dupla
                 //return red();
+                Server.log("Rotação esquerda dupla ao inserir nó de chave " + ch);
                 arv.dir = rotacaoDireitaSimples(arv.dir);
                 return rotacaoEsquerdaSimples(arv);
             }
@@ -62,21 +89,22 @@ public class AVL {
         return arv;
     }
 
-    public void remover(int ch, String v){
-        raiz = remover(raiz,ch,v);
+    public void remover(int ch, Ordem o){
+        raiz = remover(raiz,ch,o);
     }
 
-    private Node remover(Node arv,int ch, String v){
+    private Node remover(Node arv,int ch, Ordem o){
         if(arv == null){
             return arv;
         }
         if( ch < arv.chave){
-            arv.esq = remover(arv.esq, ch, v);
+            arv.esq = remover(arv.esq, ch, o);
         }
         else if(ch > arv.chave){
-            arv.dir = remover(arv.dir, ch, v);
+            arv.dir = remover(arv.dir, ch, o);
         }
         else{
+            tam--;
             // caso 1 nó sem filjo
             if(arv.esq == null && arv.dir == null){
                 arv = null;
@@ -98,7 +126,7 @@ public class AVL {
                 Node temp = menorChave(arv.dir);
                 arv.chave = temp.chave;
                 temp.chave = ch;
-                arv.dir = remover(arv.dir, ch, v);
+                arv.dir = remover(arv.dir, ch, o);
             }
         }
         if(arv == null){
@@ -115,21 +143,26 @@ public class AVL {
          if(fb > 1){
             
             if(fbArvEsq >=0){ // simples
-                //return rds();    
+                Server.log("Rotação direita simples ao remover nó de chave " + ch);
+                return rotacaoDireitaSimples(arv);   
             }
             else if(fbArvEsq < 0){ // dupla
-                //return rdd();
+                Server.log("Rotação direita dupla ao remover nó de chave " + ch);
+                arv.esq = rotacaoEsquerdaSimples(arv.esq);
+                return rotacaoDireitaSimples(arv);
             }
             
         }
         //rotacao esquerda 
         if(fb < -1 && fbArvDir <= 0){
             if(fbArvDir <= 0){ // simples
-                //return res();
+                Server.log("Rotação esquerda simples ao remover nó de chave " + ch);
+                return rotacaoEsquerdaSimples(arv);
             }
             else{ //dupla
-                
-                //return red();
+                Server.log("Rotação esquerda dupla ao remover nó de chave " + ch);
+                arv.dir = rotacaoDireitaSimples(arv.dir);
+                return rotacaoEsquerdaSimples(arv);
             }
             
         }
@@ -199,8 +232,14 @@ public class AVL {
     private void ordem(Node arv){
         if(arv != null){
             ordem(arv.esq);
-            System.out.print(arv.chave + " ");
+            System.out.println("\n\nCodigo: " + arv.chave );
+            System.out.println("Nome: " + arv.os.getNome());
+            System.out.println("Descricao: " + arv.os.getDescricao());
+            System.out.println("Hora de solicitacao: " + arv.os.getHora());
             ordem(arv.dir);
         }
     }
+
+    
+
 }
