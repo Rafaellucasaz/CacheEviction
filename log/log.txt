@@ -1,0 +1,205 @@
+Cadastro de chave 4
+altura pós insercao: 0
+------------------------------------------------
+Cadastro de chave 1
+altura pós insercao: 1
+------------------------------------------------
+Cadastro de chave 17
+altura pós insercao: 1
+------------------------------------------------
+Cadastro de chave 94
+altura pós insercao: 2
+------------------------------------------------
+Cadastro de chave 69
+Rotação esquerda simples ao inserir nó de chave 69
+altura pós insercao: 2
+------------------------------------------------
+Cadastro de chave 63
+Rotação direita simples ao inserir nó de chave 63
+altura pós insercao: 2
+------------------------------------------------
+Cadastro de chave 54
+altura pós insercao: 3
+------------------------------------------------
+Cadastro de chave 87
+altura pós insercao: 3
+------------------------------------------------
+Cadastro de chave 35
+Rotação direita simples ao inserir nó de chave 35
+altura pós insercao: 3
+------------------------------------------------
+Cadastro de chave 22
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 75
+Rotação direita simples ao inserir nó de chave 75
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 10
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 33
+Rotação direita dupla ao inserir nó de chave 33
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 58
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 29
+Rotação direita simples ao inserir nó de chave 29
+Rotação esquerda simples ao inserir nó de chave 29
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 90
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 6
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 47
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 18
+altura pós insercao: 4
+------------------------------------------------
+Cadastro de chave 37
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 41
+Rotação direita dupla ao inserir nó de chave 41
+Rotação esquerda simples ao inserir nó de chave 41
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 60
+Rotação direita dupla ao inserir nó de chave 60
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 3
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 53
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 92
+Rotação direita dupla ao inserir nó de chave 92
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 28
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 71
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 9
+Rotação direita dupla ao inserir nó de chave 9
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 20
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 88
+Rotação esquerda simples ao inserir nó de chave 88
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 14
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 13
+Rotação esquerda simples ao inserir nó de chave 13
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 38
+Rotação esquerda simples ao inserir nó de chave 38
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 100
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 70
+Rotação direita simples ao inserir nó de chave 70
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 21
+Rotação esquerda simples ao inserir nó de chave 21
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 97
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 11
+Rotação direita simples ao inserir nó de chave 11
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 55
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 73
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 56
+Rotação direita dupla ao inserir nó de chave 56
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 26
+Rotação direita simples ao inserir nó de chave 26
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 81
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 7
+Rotação direita dupla ao inserir nó de chave 7
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 46
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 67
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 84
+Rotação esquerda simples ao inserir nó de chave 84
+altura pós insercao: 5
+------------------------------------------------
+Cadastro de chave 31
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 16
+Rotação esquerda simples ao inserir nó de chave 16
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 39
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 62
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 48
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 93
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 68
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 64
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 85
+Rotação esquerda simples ao inserir nó de chave 85
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 27
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 15
+Rotação esquerda simples ao inserir nó de chave 15
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 44
+altura pós insercao: 6
+------------------------------------------------
+Cadastro de chave 83
+altura pós insercao: 6
+------------------------------------------------

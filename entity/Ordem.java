@@ -1,6 +1,8 @@
 package entity;
 
 
+
+import java.time.LocalTime;
 public class Ordem {
     
     private int id;
@@ -12,11 +14,11 @@ public class Ordem {
     public Ordem(){
         
     }
-    public Ordem(int id,String nome, String descricao,String hora) throws Exception{
+    public Ordem(int id,String nome, String descricao) throws Exception{
         setId(id);
         setNome(nome);
         setDescricao(descricao);
-        setHora(hora);
+        setHora();
         
     }
 
@@ -54,8 +56,10 @@ public class Ordem {
         return hora;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public void setHora() {
+        int h = LocalTime.now().getHour();
+        int min = LocalTime.now().getMinute();
+        hora = h + ":" + min;
     }
 
     
