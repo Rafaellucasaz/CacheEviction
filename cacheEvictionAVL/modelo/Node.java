@@ -1,6 +1,6 @@
-package modelo;
+package cacheEvictionAVL.modelo;
 
-import entity.Ordem;
+import cacheEvictionAVL.entity.Ordem;
 
 public class Node {
     public int chave;

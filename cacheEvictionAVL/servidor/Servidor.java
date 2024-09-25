@@ -1,9 +1,11 @@
-package servidor;
+package cacheEvictionAVL.servidor;
 
-import entity.Ordem;
-import modelo.AVL;
-import modelo.Node;
 import java.util.List;
+
+import cacheEvictionAVL.entity.Ordem;
+import cacheEvictionAVL.modelo.AVL;
+import cacheEvictionAVL.modelo.Node;
+
 import java.util.ArrayList;
 import java.io.BufferedWriter;
 import java.io.FileWriter;

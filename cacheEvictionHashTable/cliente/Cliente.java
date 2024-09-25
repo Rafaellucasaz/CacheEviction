@@ -1,8 +1,9 @@
-package Cliente;
+package cliente;
+import java.util.Scanner;
 
 import entity.Ordem;
+import modelo.No;
 import servidor.Servidor;
-import java.util.Scanner;
 
 public class Cliente {
     
@@ -26,26 +27,21 @@ public class Cliente {
         Servidor servidor = getServidor();
         System.out.println("digite o codigo da ordem de servico");
         int id = sc.nextInt();
-        Ordem os = servidor.buscar(id);
-        if(os == null){
-            System.out.println("elemento nao existe na base, cadastrando novo elemento");
-            os = new Ordem();
-            os.setId(id);
-            sc.nextLine();
-            System.out.println("digite o nome do equipamento:");
-            os.setNome(sc.nextLine());
-            System.out.println("digite a descricao da ordem de servico: ");
-            os.setDescricao(sc.nextLine());
-            os.setHora();    
-            servidor.cadastrar(os);
+        Ordem os = new Ordem();
+        os.setId(id);
+        sc.nextLine();
+        System.out.println("digite o nome do equipamento:");
+        os.setNome(sc.nextLine());
+        System.out.println("digite a descricao da ordem de servico: ");
+        os.setDescricao(sc.nextLine());
+        os.setHora();    
+        Boolean resultado = servidor.cadastrar(os);
+        if(resultado){
             System.out.println("cadastro feito com sucesso!");
         }
         else{
             System.out.println("ja existe uma ordem com esse codigo");
         }
-       
-
-        
     }
 
     public void alterarOrdem() throws Exception{
@@ -53,20 +49,20 @@ public class Cliente {
         System.out.println("digite o codigo da ordem de servico a ser alterada: ");
         int id = sc.nextInt();
         sc.nextLine();
-        Ordem os = servidor.buscar(id);
-        if(os == null){
+        No no = servidor.alterar(id);
+        if(no == null){
             System.out.println("Ordem nao encontrada");
         }
         else{
             System.out.println("Informacoes da ordem: ");
-            System.out.println("Nome: " + os.getNome());
-            System.out.println("Descricao: " + os.getDescricao());
-            System.out.println("Hora da solicitacao: " + os.getHora());
+            System.out.println("Nome: " + no.getOs().getNome());
+            System.out.println("Descricao: " + no.getOs().getDescricao());
+            System.out.println("Hora da solicitacao: " + no.getOs().getHora());
             System.out.println("digite os novos valores da ordem ");
             System.out.println("Nome: ");
-            os.setNome(sc.nextLine());
+            no.getOs().setNome(sc.nextLine());
             System.out.println("Descricao: ");
-            os.setDescricao(sc.nextLine());
+            no.getOs().setDescricao(sc.nextLine());
             
 
             System.out.println("ordem de servico alterada com sucesso!");
@@ -78,13 +74,13 @@ public class Cliente {
         System.out.println("digite o codigo da ordem a ser removida: ");
         int id = sc.nextInt();
         sc.nextLine();
-        Ordem os = servidor.buscarAux(id);
-        if(os == null){
-            System.out.println("ordem de servico nao encontrada");
+        boolean resultado = servidor.remover(id);
+        if(resultado){
+            System.out.println("ordem de servico removida com sucesso!");
+           
         }
         else{
-            servidor.remover(os);
-            System.out.println("ordem de servico removida com sucesso!");
+            System.out.println("ordem de servico nao encontrada");
         }
     }
 

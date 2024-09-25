@@ -1,13 +1,11 @@
-package main;
+package cacheEvictionAVL.main;
 
-import Cliente.Cliente;
-import servidor.Servidor;
-import entity.Ordem;
-import modelo.AVL;
-import modelo.Node;
 import java.util.InputMismatchException;
 import java.lang.Thread;
 import java.util.Scanner;
+
+import cacheEvictionAVL.cliente.Cliente;
+import cacheEvictionAVL.servidor.Servidor;
 public class Main {
     
     public static void main(String[] args) {
@@ -71,6 +69,7 @@ public class Main {
                 case 6:
                     System.out.println("Quantidade de registros atual: " + servidor.tamanho());
                 case 7:
+                    sc.close();
                     break;
                 default:
                     System.out.println("opcao invalida");

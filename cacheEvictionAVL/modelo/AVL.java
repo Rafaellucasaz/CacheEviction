@@ -1,7 +1,7 @@
-package modelo;
+package cacheEvictionAVL.modelo;
 
-import entity.Ordem;
-import servidor.Servidor;
+import cacheEvictionAVL.entity.Ordem;
+import cacheEvictionAVL.servidor.Servidor;
 
 
 
